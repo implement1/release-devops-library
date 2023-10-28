@@ -1,4 +1,4 @@
-name: devops-toolkit
+name: dev-library
 command: ["sh"]
 sync:
   - .:/src
