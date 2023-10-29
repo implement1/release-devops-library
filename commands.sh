@@ -1,3 +1,3 @@
 cd NextJS
-npm install
-npm run dev
+yarn install
+yarn run dev
