@@ -1,6 +1,13 @@
-name: dev-library-deployment
-command: ["sh"]
-sync:
-  - .:/src
-persistentVolume:
-  enabled: false
+build:
+  hello-world:
+    image: okteto.dev/node-hello-world:1.0.0
+    context: .
+deploy:
+  - kubectl apply -f k8s.yml
+dev:
+  hello-world:
+    command: bash
+    sync:
+      - .:/usr/src/app
+    forward:
+      - 9229:9229
