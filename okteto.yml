@@ -1,4 +1,4 @@
-name: dev-library
+name: dev-library-deployment
 command: ["sh"]
 sync:
   - .:/src
