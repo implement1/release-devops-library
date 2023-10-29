@@ -3,7 +3,7 @@ build:
     image: okteto.dev/node-hello-world:1.0.0
     context: .
 deploy:
-  - kubectl apply -f k8s.yml
+  - kubectl apply -f k8s.yaml
 dev:
   hello-world:
     command: bash
