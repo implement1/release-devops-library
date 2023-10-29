@@ -1,0 +1,6 @@
+image:
+  repository: kkryptocode/elib
+  tag: v1
+ingress:
+  enabled: true
+  host: cloudtoolkits.com
