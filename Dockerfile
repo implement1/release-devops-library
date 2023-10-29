@@ -3,8 +3,9 @@ COPY . .
 
 RUN apt update &&\
 	apt install -y curl git &&\
-	curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh &&\
+	curl -sL https://deb.nodesource.com/setup_19.x -o nodesource_setup.sh &&\
 	bash nodesource_setup.sh \
 	&& apt-get update \
-	&& apt-get install -y nodejs
+	&& apt-get install -y nodejs \
+	&& npm install -y next 
 ENTRYPOINT ["bash", "commands.sh"]
