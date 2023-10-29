@@ -6,6 +6,5 @@ RUN apt update &&\
 	curl -sL https://deb.nodesource.com/setup_19.x -o nodesource_setup.sh &&\
 	bash nodesource_setup.sh \
 	&& apt-get update \
-	&& apt-get install -y nodejs \
-	&& npm install -y next 
+	&& apt-get install -y nodejs 
 ENTRYPOINT ["bash", "commands.sh"]
