@@ -1,0 +1,8 @@
+deploy:
+  - okteto build --tag okteto.dev/dev-library:${OKTETO_GIT_COMMIT} .
+  - helm repo add dev-library https://implement1.github.io/devops-library/
+  - helm upgrade --install dev-library-deployment dev-library/deploy-elibrary --set image.repository=okteto.dev/dev-library --set image.tag=${OKTETO_GIT_COMMIT} --set ingress.enabled=false
+devs:
+  - okteto.yml
+
+
